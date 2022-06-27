@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="uTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3_table</title>
+	
+	<style type="text/css">
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		
+		th, td {
+			padding: 10px;		
+		}
+		
+	</style>
+</head>
+
+
+
+<body>
+
+	<table width="100%">
+		<thead>
+			<tr>
+				<td width="50px">번호</td>
+				<td width="100px">이름</td>
+				<td width="200px">아이디</td>
+				<td width="200px">주소</td>
+				<td width="100px">상세주소</td>
+				<td width="100px">mobile</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>9</td>
+				<td>홍길동</td>
+				<td>test01</td>
+				<td>서울시 강동구 강일동</td>
+				<td>123-456</td>
+				<td>010-1234-5678</td> colspan
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>10</td>
+				<td>홍길동</td>
+				<td>test01</td>
+				<td>서울시 송파구 잠실동</td>
+				<td>123-456</td>
+				<td>010-1234-5678</td>
+			</tr>
+		</tfoot>
+	</table>
+	<br>
+	
+<!-- colspan 행 병합 -->
+	<table>
+			<tr>
+				<td width="100px"></td>
+				<td width="100px"></td>
+				<td width="100px"></td>
+				<td width="100px"></td>
+			</tr>
+			<tr>
+				<td width="100px"></td>
+				<td width="100px" colspan="2">here</td>
+				<!-- <td width="100px">here</td> -->
+				<td width="100px"></td>
+			</tr>
+	</table>
+	<br>
+<!-- rowspan 행 병합 -->
+	<table>
+			<tr>
+				<td width="100px"></td>
+				<td width="100px"></td>
+				<td width="100px" rowspan="3"></td>
+				<td width="100px"></td>
+			</tr>
+			<tr>
+				<td width="100px"></td>
+				<td width="100px"></td>
+				<!-- <td width="100px"></td> -->
+				<td width="100px"></td>
+			</tr>
+			<tr>
+				<td width="100px"></td>
+				<td width="100px"></td>
+				<!-- <td width="100px"></td> -->
+				<td width="100px"></td>
+			</tr>
+	</table>
+</body>
+</html>
