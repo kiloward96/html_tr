@@ -9,7 +9,7 @@
 <body>
 
 	<!-- <form action="./result.html"> -->
-	<form method="get" action="./result.html">
+	<form method="get" action="./result.html" id="form">
 	<!-- <form method="post" action="./result.html"> -->
 	
 		<!-- input 태그 안에 꼭꼭꼭 넣어야 한다. -->
@@ -51,15 +51,24 @@
 		<br><br>
 		<textarea rows="10" cols="50" name="contents" placeholder="posting"></textarea>
 		
-		<input type="hidden" name="" value="">
+		<input type="hidden" name="seq" value="678435">
 		
 		<br><br>
 		<input type="date">
 		
-		<br><br><input type="submit">
+		<!-- <br><br><input type="submit" value="전송"> -->
+		<br><br><input type="button" id="btnsave" value="전송" onclick="here();">
 	
 	</form>
 
+	<script type="text/javascript">
+	/* validation */
+	function here() {
+		/* alert("nicname: " + document.getElementById("nicname").value); */
+		alert("가입 신청 완료")
+		document.getElementById("form").submit();
+	}
+	</script>
 
 </body>
 </html>
