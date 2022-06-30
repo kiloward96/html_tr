@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="uTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2_css_selector</title>
+
+	<!-- 선택자 -->
+	<style type="text/css">
+		
+		/* tag 선택자 */
+		p {
+			font-size: 20px;
+		}
+		/* id 선택자 */
+		#aaa {
+			font-size: 30px;
+		}
+		/* class 선택자 */
+		.bbb {
+			font-size: 40px;
+		}
+		span, .ccc {
+			font-size: 40px;
+			color: blue;
+		}
+		ul li:before {
+		 	content: "※ ";
+		}
+		ul {
+			list-style: none;
+		}
+	
+	</style>
+	
+
+</head>
+
+<body>
+
+<p>골든글로브 받은 오영수 ""처음 내 자신에 `괸찮은 놈' 칭찬"</p>
+<p id="aaa">골든글로브 받은 오영수 ""처음 내 자신에 `괸찮은 놈' 칭찬"</p>
+<p class="bbb">골든글로브 받은 오영수 ""처음 내 자신에 `괸찮은 놈' 칭찬"</p>
+<p class="ccc">골든글로브 받은 오영수 ""처음 내 자신에 `괸찮은 놈' 칭찬"</p>
+<span>골든글로브 받은 오영수 ""처음 내 자신에 `괸찮은 놈' 칭찬"</span>
+<ul>
+	<li>test</li>
+</ul>
+
+</body>
+</html>

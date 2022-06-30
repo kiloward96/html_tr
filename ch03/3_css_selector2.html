@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="uTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LGG</title>
+	
+	<style type="text/css">
+		
+		 /* 여려개의 선택자 */
+		 
+		 h1, p, span, ul, li {
+		 	font-size: 20px;
+		 }
+/*  	
+		ul > li {
+			font-size: 10px;
+		 }
+ */
+ 
+ 		#aaa, #bbb {
+			font-size: 40px;
+			color: blue;
+		}
+ 		.aaa, .bbb {
+			font-size: 50px;
+			color: red;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<h1>적용 우선순위</h1>
+	<p>CSS는 어떤 속성이 우선되어 적용되는지 미리 명시하고 있습니다. 속성 값 뒤에 !important 를 붙인 속성</p>
+	<span>HTML에서 style을 직접 지정한 속성</span>
+	<h1 id="aaa">#id 로 지정한 속성</h1>
+	<h1 class="aaa">#id 로 지정한 속성</h1>
+	<p id="bbb">.클래스, :추상클래스 로 지정한 속성</p>
+	<p class="bbb">.클래스, :추상클래스 로 지정한 속성</p>
+	<ul>
+		
+		<li>태그이름 으로 지정한 속성
+		<li>상위 객체에 의해 상속된 속성
+	</ul>
+</body>
+</html>
