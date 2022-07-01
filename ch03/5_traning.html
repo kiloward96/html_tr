@@ -18,6 +18,10 @@
 		.letterbox {
 			width: 100px;
 		}
+		.btn {
+			width: 110px;
+			text-align: center;
+		}
 		
 		
 	</style>
@@ -28,9 +32,9 @@
 		<tr>
 			<td style="width: 20%">아이디</td>
 			<td style="width: 80%">
-				<input type="text" name="id" id="id" class="letterbox">
+				<input class="letterbox" type="text" name="id" id="id">
 				<input type="hidden" name="id_2" id="id_2" class="letterbox" value="test">
-				<input type="button" value="아이디중복확인" id="chk_id" onclick="id_chk()">
+				<input class="btn" type="button" value="아이디중복확인" id="chk_id" onclick="id_chk()">
 			</td>
 		</tr>
 		<tr>
@@ -41,7 +45,7 @@
 			<td>비밀번호 확인</td>
 			<td>
 				<input type="text" name="password" id="passwd_chk" class="letterbox">
-				<input type="button" value="비밀번호확인" id="btn_pwchk" onclick="pw_chk()">
+				<input class="btn" type="button" value="비밀번호확인" id="btn_pwchk" onclick="pw_chk()">
 			</td>
 		</tr>
 		<tr>
@@ -65,19 +69,18 @@
 		function id_chk() {
 			var id_1 = document.getElementById("id").value;
 			var id_2 = document.getElementById("id_2").value;
-			if (id_1 == id_2) { 
-				alert("이미 존재하는 아이디 입니다.");
-				}
-			if (id_1){
-				
-				}
-			if (id != id_2) {
+			if (id_1 != id_2) {
 				alert("사용가능한 아이디 입니다.");
+				return false;
+				}
+			
+			else {
+				alert("이미 존재하는 아이디 입니다.");
+				return true;
 				}
 			}
 		function pw_chk() {
-			var pw_compare	
-				document.getElementByID("")
+			var passwd_1 = document.getElementByID("passwd").value;
 				/* alert("nicname: " + document.getElementById("nicname").value); */
 				alert("확인되었습니다.")
 				/* document.getElementById("form").submit(); */
