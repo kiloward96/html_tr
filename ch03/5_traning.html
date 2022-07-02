@@ -80,9 +80,14 @@
 				}
 			}
 		function pw_chk() {
-			var passwd_1 = document.getElementByID("passwd").value;
+			var pwd_1 = document.getElementByID("passwd").value;
+			var pwd_2 = document.getElementById("passwd_chk").value;
+			if (pwd_1 = pwd_2)
 				/* alert("nicname: " + document.getElementById("nicname").value); */
-				alert("확인되었습니다.")
+				alrert("비밀번호가 일치합니다.")
+			else {
+				alert("비밀번호를 동일하게 입력하시기 바랍니다.")
+			}
 				/* document.getElementById("form").submit(); */
 			}
 		</script>
