@@ -44,7 +44,7 @@
 		<tr>
 			<td>비밀번호 확인</td>
 			<td>
-				<input type="text" name="password" id="passwd_chk" class="letterbox">
+				<input type="text" name="passwordCheck" id="passwd_chk" class="letterbox">
 				<input class="btn" type="button" value="비밀번호확인" id="btn_pwchk" onclick="pw_chk()">
 			</td>
 		</tr>
@@ -80,14 +80,17 @@
 				}
 			}
 		function pw_chk() {
-			var pwd_1 = document.getElementByID("passwd").value;
+			var pwd_1 = document.getElementById("passwd").value;
 			var pwd_2 = document.getElementById("passwd_chk").value;
-			if (pwd_1 = pwd_2)
+			if (pwd_1 == pwd_2) {
 				/* alert("nicname: " + document.getElementById("nicname").value); */
-				alrert("비밀번호가 일치합니다.")
+				alrert("비밀번호가 일치합니다.");
+				return true;
+				}
 			else {
-				alert("비밀번호를 동일하게 입력하시기 바랍니다.")
-			}
+				alert("비밀번호를 동일하게 입력하시기 바랍니다.");
+				return false;
+				}
 				/* document.getElementById("form").submit(); */
 			}
 		</script>
