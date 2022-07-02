@@ -40,13 +40,13 @@
 			</tr>
 			<tr>
 				<td>비밀번호</td>
-				<td><input type="password" name="password" id="passwd" class="letterbox"></td>
+				<td><input type="password" name="passwd" id="passwd" class="letterbox"></td>
 			</tr>
 			<tr>
 				<td>비밀번호 확인</td>
 				<td>
-					<input type="password" name="passwordCheck" id="passwd_chk" class="letterbox">
-					<input class="btn" type="button" value="비밀번호확인" id="btn_pwchk" onclick="chk_pw()">
+					<input type="password" name="passwd_chk" id="passwd_chk" class="letterbox">
+					<input class="btn" type="button" value="비밀번호확인" id="btn_pwck" onclick="chk_pw()">
 				</td>
 			</tr>
 			<tr>
@@ -68,7 +68,7 @@
 		</table>
 	</form>
 	<script type="text/javascript">
-		function id_chk() {
+ 		function id_chk() {
 			var id_1 = document.getElementById("id").value;
 			var id_2 = document.getElementById("id_2").value;
 			if (id_1 != id_2) {
@@ -85,13 +85,13 @@
 		function chk_pw() {
 			var pwd_1 = document.getElementById("passwd").value;
 			var pwd_2 = document.getElementById("passwd_chk").value;
-			if (pwd_1 = pwd_2) {
-				alrert("비밀번호가 일치합니다.");
-				return true;
-				}
-			else {
+			if (pwd_1 != pwd_2) {
 				alert("비밀번호를 동일하게 입력하시기 바랍니다.");
 				return false;
+				}
+			else {
+				alert("비밀번호가 일치합니다.");
+				return true;
 				}
 			}
 	</script>
