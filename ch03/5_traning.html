@@ -28,44 +28,46 @@
 
 </head>
 <body>
-	<table>
-		<tr>
-			<td style="width: 20%">아이디</td>
-			<td style="width: 80%">
-				<input class="letterbox" type="text" name="id" id="id">
-				<input type="hidden" name="id_2" id="id_2" class="letterbox" value="test">
-				<input class="btn" type="button" value="아이디중복확인" id="chk_id" onclick="id_chk()">
-			</td>
-		</tr>
-		<tr>
-			<td>비밀번호</td>
-			<td><input type="text" name="password" id="passwd" class="letterbox"></td>
-		</tr>
-		<tr>
-			<td>비밀번호 확인</td>
-			<td>
-				<input type="text" name="passwordCheck" id="passwd_chk" class="letterbox">
-				<input class="btn" type="button" value="비밀번호확인" id="btn_pwchk" onclick="pw_chk()">
-			</td>
-		</tr>
-		<tr>
-			<td>닉네임</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>E-mail</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>우편번호</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>주소</td>
-			<td></td>
-		</tr>
-	</table>
-	<script>
+	<form>
+		<table>
+			<tr>
+				<td style="width: 20%">아이디</td>
+				<td style="width: 80%">
+					<input class="letterbox" type="text" name="id" id="id">
+					<input type="hidden" name="id_2" id="id_2" class="letterbox" value="test">
+					<input class="btn" type="button" value="아이디중복확인" id="chk_id" onclick="id_chk()">
+				</td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="password" name="password" id="passwd" class="letterbox"></td>
+			</tr>
+			<tr>
+				<td>비밀번호 확인</td>
+				<td>
+					<input type="password" name="passwordCheck" id="passwd_chk" class="letterbox">
+					<input class="btn" type="button" value="비밀번호확인" id="btn_pwchk" onclick="chk_pw()">
+				</td>
+			</tr>
+			<tr>
+				<td>닉네임</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>E-mail</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>우편번호</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>주소</td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
 		function id_chk() {
 			var id_1 = document.getElementById("id").value;
 			var id_2 = document.getElementById("id_2").value;
@@ -79,11 +81,11 @@
 				return true;
 				}
 			}
-		function pw_chk() {
+		
+		function chk_pw() {
 			var pwd_1 = document.getElementById("passwd").value;
 			var pwd_2 = document.getElementById("passwd_chk").value;
-			if (pwd_1 == pwd_2) {
-				/* alert("nicname: " + document.getElementById("nicname").value); */
+			if (pwd_1 = pwd_2) {
 				alrert("비밀번호가 일치합니다.");
 				return true;
 				}
@@ -91,8 +93,8 @@
 				alert("비밀번호를 동일하게 입력하시기 바랍니다.");
 				return false;
 				}
-				/* document.getElementById("form").submit(); */
 			}
-		</script>
+	</script>
+
 </body>
 </html>
