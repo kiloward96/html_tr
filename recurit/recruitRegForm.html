@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="uTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회원가입</title>
+	<style type="text/css">
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			font-size: 12px;
+			margin: auto;
+		}
+		
+		th, td {
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<form method="get" action="./recuritJoin" id="form"> 
+		<table>
+		<caption><h4 style="text-align:left;">기본정보</h4></caption>
+			<tr>
+				<td style="background-color:lightgreen;" width="150px">√이름</td>
+				<td width="650px"><input type="text" name="name" id="name" style="width:100px;"></td>
+			</tr>
+			<tr>
+				<td style="background-color:lightgreen;">√아이디</td>
+				<td>
+					<input type="text" name="id" id="id" style="width:100px;">
+					<input type="button" id="btnsave" value="아이디중복확인" onclick="idcheck();">
+					<br><b><span style="color: brown;">6~16자리까지 영문자(소문자), 숫자 사용가능합니다.</span></b>
+				</td>
+			</tr>
+			<tr>
+				<td style="background-color:lightgreen;">√비밀번호</td>
+				<td>
+					<input type="password" name="password" id="password" style="width:100px;">
+					<br><b><span style="color: brown;">6~16자까지 영문자(대소문자), 숫자 및 특수문자 사용 가능합니다.</span></b>
+					<br><b><span style="color: brown;">3자리 연속 또는 같은 문자, 아이디는 사용하실 수 없습니다.</span></b>
+				</td>
+			</tr>
+			<tr>
+				<td style="background-color:lightgreen;">√비밀번호 확인</td>
+				<td><input type="password" name="password" id="password_chk" style="width:100px;"></td>
+			</tr>
+			<tr>
+				<td style="background-color:lightgreen;">√생년월일/성별</td>
+				<td>
+					<input type="date" name="birthday"style="width:100px;">&nbsp;
+					<input type="radio" name="gender">남자
+					<input type="radio" name="gender">여자
+				</td>
+			</tr>
+			<tr>
+				<td style="background-color:lightgreen;">√이메일</td>
+				<td>
+					<input type="text" name="email_id" id="email_id" style="width:100px;">&nbsp;@
+					<input type="text" name="email_domain" id="email_domain" style="width:100px;">
+					<select name="domain">
+						<option value="">메일주소선택
+						<option value="naver">naver.com
+						<option value="google">google.com
+						<option value="daum">daum.net
+					</select>
+					<br><input type="text" name="email_certnum" id="email_certnum" style="width:100px;">
+					<input type="button" id="btnsave" value="인증확인" onclick="chk_success();">
+				</td>
+			</tr>
+			<tr>
+				<td style="background-color:lightgreen;">√연락처</td>
+				<td>
+					<select name="mobile_1" style="width:50px;">
+						<option value="010">010
+						<option value="011">011
+						<option value="012">012
+					</select>&nbsp;-&nbsp;
+					<input type="text" name="mobile_2" id="mobile_2" style="width:40px;">&nbsp;-&nbsp;
+					<input type="text" name="mobile_3" id="mobile_3" style="width:40px;">
+					<br>
+					<select name="hpnum_1st" style="width:50px;">
+						<option value="">선택
+						<option value="010">02
+						<option value="011">031
+						<option value="012">032
+					</select>&nbsp;-&nbsp;
+					<input type="text" name="hpnum_2nd" id="hpnum_2nd" style="width:40px;">&nbsp;-&nbsp;
+					<input type="text" name="hpnum_3rd" id="hpnum_3rd" style="width:40px;">
+				</td>
+			</tr>
+			<tr>
+				<td style="background-color:lightgreen;">√우편번호</td>
+				<td>
+					<input type="text" name="postnum" id="postnum" style="width:150px">
+					<input type="button" id="serch_postnum" value="주소검색"">
+				</td>
+			</tr>
+			<tr>
+				<td style="background-color:lightgreen;">√주소</td>
+				<td>
+					<input type="text" name="main_addr" id="main_addr" style="width:500px;">
+					<br><input type="text" name="sub_addr" id="sub_addr" style="width:150px;">
+				</td>
+			</tr>
+			<tr>
+				<td style="background-color:lightgreen;">정보수신 여부</td>
+				<td>
+					<b>서비스 및 이벤트 소식을</b>
+					<input type="checkbox" name="receive_1">Email로 수신하겠습니다.
+					<input type="checkbox" name="receive_2">SMS로 수신하겠습니다.
+				</td>
+			</tr>
+		</table>
+		<br>
+	</form>
+	<script type="text/javascript">
+	/* validation */
+	function idcheck() {
+		/* alert("nicname: " + document.getElementById("nicname").value); */
+		alert("사용가능한 ID입니다.")
+		/* document.getElementById("form").submit(); */
+	}
+	function chk_success() {
+		/* alert("nicname: " + document.getElementById("nicname").value); */
+		alert("확인되었습니다.")
+		/* document.getElementById("form").submit(); */
+	}
+	</script>
+</body>
+</html>
