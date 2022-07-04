@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="uTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>11_css_table</title>
+	
+	<style>
+		table {
+			width: 100%;
+			table-layout: fixed;
+		}
+ 		table, th, td {
+			border: solid;
+ 			border-width: 1px;
+			border-collapse: collapse;
+			height: 50px;
+			vertical-align: bottom;
+			
+		}
+		th, td {
+			padding: 5px;
+			text-align: center;
+		}
+		
+	</style>
+</head>
+<body>
+
+	<br>
+		<table>
+			<tr>
+				<th width="80px" height: "100px">순번</th>
+				<th style="width: 100px;">아이디</th>
+				<th style="width: 80px;">이름</th>
+				<th style="height: 100px;">이메일</th>
+				<th style="width: 200px;">모바일</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>test01</td>
+				<td>김철수</td>
+				<td>test01@test.com</td>
+				<td>010-1111-1111</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>test02</td>
+				<td>김영희</td>
+				<td>test02@test.com</td>
+				<td>010-2222-2222</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>test03</td>
+				<td>이다희</td>
+				<td>test03@test.com</td>
+				<td>010-3333-3333</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>test04</td>
+				<td>박은빈</td>
+				<td>test04@test.com</td>
+				<td>010-9999-9999</td>
+			</tr>
+		</table>
+</body>
+</html>
