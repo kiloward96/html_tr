@@ -27,3 +27,8 @@ function chk_pw() {
 		return true;
 		}
 	}
+	function chk_success() {
+		/* alert("nicname: " + document.getElementById("nicname").value); */
+		alert("확인되었습니다.")
+		/* document.getElementById("form").submit(); */
+	}

@@ -4,46 +4,91 @@
 <meta charset="uTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>회원가입</title>
+	<script type="text/javascript" src="./action.js"></script>
 	<style type="text/css">
-		table, th, td {
-			border: 1px solid black;
-			border-collapse: collapse;
-			font-size: 12px;
-			margin: auto;
+		body {
+			background-image: url('image/background.jpg');
+			background-repeat: no-repeat;
+			background-size: 1920px 1080px;
 		}
-		
-		th, td {
-			padding: 10px;
+		table.banner {
+			position: fixed;
+			margin: auto;
+			width: 1000px;
+			text-align: center;
+		}
+		caption {
+			color: white;
+			text-align: center;
+			font-size: 40px;
+			font-weight: bold;
+			font-family: Nanum Gothic;
+		}
+		a {
+			text-decoration-line: none;
+		}
+		a:link {
+			color: white;
+		}
+		a:visited {
+			color: white;
+		}
+		a:hover {
+			color: white;
+		}
+		a:active {
+			color: white;
+		}
+		.top {
+			color: white;
+			background-color: grey;
+			font-size: 15px;
+			font-weight: bold;
+		}
+		.middle {
+			background-color: white;
+			font-size: 13px;
+		}
+		th {
+			background-color: grey;
 		}
 	</style>
 </head>
 <body>
-	<form method="get" action="./recuritJoin" id="form"> 
-		<table>
-		<caption><h4 style="text-align:left;">기본정보</h4></caption>
+	<form method="get" action="./recuritView.html" id="form"> 
+		
+		<table style="background-color: white">
+		<caption>
+			<h4>회원가입</h4>
+			<a href="./index.html" style="font-size: 30px">Main</a>
+		</caption>
 			<tr>
-				<td style="background-color:lightgreen;" width="150px">√이름</td>
+				<th width="150px">√이름</th>
 				<td width="650px"><input type="text" name="name" id="name" style="width:100px;"></td>
 			</tr>
 			<tr>
-				<td style="background-color:lightgreen;">√아이디</td>
+				<th>√아이디</th>
 				<td>
 					<input type="text" name="id" id="id" style="width:100px;">
-					<input type="button" id="btnsave" value="아이디중복확인" onclick="idcheck();">
+					<input type="hidden" name="id_2" id="id_2" value="test">
+					<input class="btn" type="button" value="아이디중복확인" id="chk_id" onclick="id_chk()">
 					<br><b><span style="color: brown;">6~16자리까지 영문자(소문자), 숫자 사용가능합니다.</span></b>
 				</td>
 			</tr>
 			<tr>
 				<td style="background-color:lightgreen;">√비밀번호</td>
 				<td>
-					<input type="password" name="password" id="password" style="width:100px;">
+					<input type="password" name="passwd" id="passwd" style="width:100px;">
 					<br><b><span style="color: brown;">6~16자까지 영문자(대소문자), 숫자 및 특수문자 사용 가능합니다.</span></b>
 					<br><b><span style="color: brown;">3자리 연속 또는 같은 문자, 아이디는 사용하실 수 없습니다.</span></b>
 				</td>
 			</tr>
 			<tr>
-				<td style="background-color:lightgreen;">√비밀번호 확인</td>
-				<td><input type="password" name="password" id="password_chk" style="width:100px;"></td>
+				<th>√비밀번호 확인</th>
+				<td>
+				<input type="password" name="passwd_chk" id="passwd_chk" style="width:100px;">
+				<input class="btn" type="button" value="비밀번호확인" id="btn_pwck" onclick="chk_pw()">
+				</td>
 			</tr>
 			<tr>
 				<td style="background-color:lightgreen;">√생년월일/성별</td>
@@ -114,7 +159,7 @@
 		</table>
 		<br>
 	</form>
-	<script type="text/javascript">
+<!-- 	<script type="text/javascript">
 	/* validation */
 	function idcheck() {
 		/* alert("nicname: " + document.getElementById("nicname").value); */
@@ -126,6 +171,6 @@
 		alert("확인되었습니다.")
 		/* document.getElementById("form").submit(); */
 	}
-	</script>
+	</script> -->
 </body>
 </html>
