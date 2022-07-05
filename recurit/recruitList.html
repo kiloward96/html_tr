@@ -27,6 +27,9 @@
 			width: 1000px;
 			text-align: center;
 			height: 15px;
+			border: 1px solid black;
+			border-collapse: collapse;
+			text-align: center;
 		}
 		
 		caption {
@@ -36,12 +39,14 @@
 			font-weight: bold;
 			font-family: Nanum Gothic;
 		}
-		th, td {
+		td {
+			border: 1px solid black;
 			color: black;
 			text-align: center;
 			font-size: 20px;
 			font-weight: bold;
 			font-family: Nanum Gothic;
+			height: 15px;
 		}
 		a {
 			text-decoration-line: none;
@@ -71,14 +76,13 @@
 	</style>
 
 <body>
-<form method="get" action="./index.html" id="form">
+<form method="get" action="./index.html" id="recurit_list">
 	<table class="banner">
 	<caption>입사지원 리스트</caption>
 		<tr>
-			<td><a href="./index.html">Main</a></th>
-			<td><a href="./index.html" onclick="logout();">Log Out</a></th>
-			<td><a href="./recruitModForm.html">List</th>
-			<td><a href="./recruitWriteForm.html">Write</th>
+			<th><a href="./index.html">Main</a></th>
+			<th><a href="./index.html" onclick="logout();">Log Out</a></th>
+			<th><a href="./recruitWriteForm.html">Write</th>
 		</tr>
 	</table>
 	<table class="list"	>
@@ -91,8 +95,17 @@
 			<td class="top" width="150px">Mobile</td>
 			<td class="top" width="200px">업로드일</td>
 		</tr>
+		<tr onclick="location.href='./recruitView.html'">
+			<td class="middle">1</td>
+			<td class="middle">홍길동</td>
+			<td class="middle">27</td>
+			<td class="middle">신입</td>
+			<td class="middle">개발자</td>
+			<td class="middle">010-1111-2222</td>
+			<td class="middle">2022.07.05</td>
+		</tr>
 		<tr>
-			<td class="middle">null</td>
+			<td class="middle"></td>
 			<td class="middle"></td>
 			<td class="middle"></td>
 			<td class="middle"></td>
@@ -101,16 +114,7 @@
 			<td class="middle"></td>
 		</tr>
 		<tr>
-			<td class="middle">null</td>
 			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-		</tr>
-		<tr>
-			<td class="middle">null</td>
 			<td class="middle"></td>
 			<td class="middle"></td>
 			<td class="middle"></td>
@@ -119,16 +123,7 @@
 			<td class="middle"></td>
 		</tr>
 		<tr>
-			<td class="middle">null</td>
 			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-		</tr>
-		<tr>
-			<td class="middle">null</td>
 			<td class="middle"></td>
 			<td class="middle"></td>
 			<td class="middle"></td>
@@ -137,16 +132,7 @@
 			<td class="middle"></td>
 		</tr>
 		<tr>
-			<td class="middle">null</td>
 			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-		</tr>
-		<tr>
-			<td class="middle">null</td>
 			<td class="middle"></td>
 			<td class="middle"></td>
 			<td class="middle"></td>
@@ -155,16 +141,7 @@
 			<td class="middle"></td>
 		</tr>
 		<tr>
-			<td class="middle">null</td>
 			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-			<td class="middle"></td>
-		</tr>
-		<tr>
-			<td class="middle">null</td>
 			<td class="middle"></td>
 			<td class="middle"></td>
 			<td class="middle"></td>
@@ -173,7 +150,34 @@
 			<td class="middle"></td>
 		</tr>
 		<tr>
-			<td class="middle">null</td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+		</tr>
+		<tr>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+		</tr>
+		<tr>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+			<td class="middle"></td>
+		</tr>
+		<tr>
+			<td class="middle"></td>
 			<td class="middle"></td>
 			<td class="middle"></td>
 			<td class="middle"></td>

@@ -4,7 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>입사지원서</title>
+	<script type="text/javascript" src="./action.js"></script>
 	<style type="text/css">
+		body {
+			background-image: url('image/background.jpg');
+			background-repeat: no-repeat;
+			background-size: 1920px 1080px;
+			position: scroll;
+			background-attachment: fixed;
+		}
 		table {
 			margin: auto;
 			width: 1000px;
@@ -22,62 +30,67 @@
 		th, td {
 			font-size: 12px;
 			padding: 10px;
+			background-color: white;
 		}
 	</style>
 </head>
 <body>
-	<h1><center>입사지원서</center></h1>
+<form method="get" name="recurit_data">
+	<div style="background-color: white; width: 1200px; margin: auto; text-align: center;">
 	<table style="margin-left:auto;margin-right:auto" height="15px">
+	<caption style="text-align: center;"><h1>입사지원서</h1></caption>
 		<tr>
 			<td style="background-color:#93DAFF" width="100px">지원분야</td>
-			<td width="100px"></td>
+			<td width="100px"><input type="text" id="SupportArea"></td>
 			<td style="background-color:#93DAFF" width="100px">경력구분</td>
-			<td width="100px"></td>
+			<td width="100px"><input type="text" id="career"></td>
 			<td style="background-color:#93DAFF" width="100px">희망연봉</td>
-			<td width="100px"></td>
+			<td width="100px"><input type="text" id="Salary"></td>
 		</tr>
 	</table>
 	<br>
-		<table style="margin-left:auto;margin-right:auto" width="95%">
+		<table style="margin-left:auto;margin-right:auto">
 		<caption><h4>□ 기본정보</h4></caption>
 			<tr>
-				<td width="80px" rowspan="6"></td>
+				<td width="100px" rowspan="6"></td>
 				<td style="background-color:#93DAFF; letter-spacing:10px" width="50px">성 명</td>
-				<td width="150px"></td>				
+				<td width="150px"><input type="text" id="name"></td>				
 				<td style="background-color:#93DAFF; letter-spacing:10px" width="50px">한 문</td>
-				<td width="150px"></td>
+				<td width="150px"><input type="text" id="classic_chinese"></td>
 			</tr>
 			<tr>
 				<!-- <td width="150px"></td> -->
-				<td style="background-color:#93DAFF; letter-spacing:10px" width="50px">영 문</td>
-				<td width="150px"></td>
+				<td style="background-color:#93DAFF; letter-spacing:10px">영 문</td>
+				<td width="150px"><input type="text" id="english"></td>
 				<td style="background-color:#93DAFF" width="50px">생년월일</td>
-				<td width="150px"></td>
+				<td width="150px"><input type="text" id="birthday"></td>
 			</tr>
 			<tr>
 				<!-- <td width="150px"></td> -->
-				<td style="background-color:#93DAFF" width="50px">전화번호</td>
-				<td width="150px"></td>
-				<td style="background-color:#93DAFF" width="50px">비상연락망</td>
-				<td width="150px"></td>
+				<td style="background-color:#93DAFF">전화번호</td>
+				<td width="150px"><input type="text" id="mobile"></td>
+				<td style="background-color:#93DAFF">비상연락망</td>
+				<td width="150px"><input type="text" id="mobile_emer"></td>
 			</tr>
 			<tr>
 				<!-- <td width="150px"></td> -->
-				<td style="background-color:#93DAFF" width="50px">전자우편</td>
-				<td width="150px"></td>
-				<td style="background-color:#93DAFF; letter-spacing:10px" width="50px">나 이</td>
-				<td width="150px"></td>
+				<td style="background-color:#93DAFF">전자우편</td>
+				<td width="150px">
+					<input type="text" name="email" id="email">
+				</td>
+				<td style="background-color:#93DAFF; letter-spacing:10px">나 이</td>
+				<td width="150px"><input type="text" id="age"></td>
 			<tr>
 				<!-- <td width="150px"></td> -->
-				<td style="background-color:#93DAFF; letter-spacing:10px" width="50px">주 소</td>
-				<td width="150px" colspan="3"></td>
+				<td style="background-color:#93DAFF; letter-spacing:10px">주 소</td>
+				<td width="150px" colspan="3"><input type="text" id="address" style="width: 500px;"></td></td>
 				<!-- <td width="50px"></td>
 				<td width="150px"></td> -->
 			</tr>
 			<tr>
 				<!-- <td width="150px"></td> -->
-				<td style="background-color:#93DAFF" width="50px">취미생활</td>
-				<td width="150px" colspan="3"></td>
+				<td style="background-color:#93DAFF">취미생활</td>
+				<td width="150px" colspan="3"><input type="text" id="hobby" style="width: 500px;"></td>
 				<!-- <td width="50px"></td>
 				<td width="150px"></td> -->
 			</tr>
@@ -96,18 +109,18 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td><input type="text" id="period"></td>
+					<td><input type="text" id="school"></td>
+					<td><input type="text" id="Category"></td>
+					<td><input type="text" id="depart"></td>
+					<td><input type="text" id="location"></td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td><input type="text" id="period2"></td>
+					<td><input type="text" id="school2"></td>
+					<td><input type="text" id="Category2"></td>
+					<td><input type="text" id="depart2"></td>
+					<td><input type="text" id="location2"></td>
 				</tr>
 			</tbody>
 		</table>
@@ -120,11 +133,10 @@
 					<td style="background-color:#93DAFF" width="150px">연수과정 및 내용</td>
 				</tr>
 				<tr>
-					<td></td
-					<td></td>
-					<td></td>
+					<td><input type="text" id="period_tr"></td>
+					<td><input type="text" id="inst_tr"></td>
+					<td><input type="text" id="work_tr"></td>
 				</tr>
-			
 		</table>
 	<br>
 		<table>
@@ -139,16 +151,16 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td><input type="text" id="certificate_get"></td>
+					<td><input type="text" id="certificate_grade"></td>
+					<td><input type="text" id="certificate_place"></td>
+					<td><input type="text" id="tech"></td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td><input type="text" id="certificate_get2"></td>
+					<td><input type="text" id="certificate_grade2"></td>
+					<td><input type="text" id="certificate_place2"></td>
+					<td><input type="text" id="tech_2"></td>
 				</tr>
 			</tbody>
 		</table>
@@ -165,18 +177,25 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td><input type="text" id="period"></td>
+				<td><input type="text" id="company"></td>
+				<td><input type="text" id="part"></td>
+				<td><input type="text" id="exper"></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td><input type="text" id="period_2"></td>
+				<td><input type="text" id="company_2"></td>
+				<td><input type="text" id="part_2"></td>
+				<td><input type="text" id="exper_2"></td>
 			</tr>
 		</tbody>
 	</table>
+	<br>
+	<input style="text-align: center;" type="button" id="btn_list" value="목록" onclick="recu_list();">
+	<input type="button" id="btn_save" value="저장" onclick="save();">
+	<input type="button" id="btn_cancel" value="취소" onclick="cancel();">
+	<br><br>
+	</div>
+</form>
 </body>
 </html>
