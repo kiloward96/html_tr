@@ -4,7 +4,7 @@ function login() {
 	var passwd = document.getElementById("passwd").value;
 	var passwd_2 = document.getElementById("passwd_chk").value;
 	if (id != id_2) {
-		alert("로그인에 실패하였습니다.");
+		alert("존재하지 않는 계정입니다.");
 		return false;
 	}
 	else if (passwd != passwd_2) {
