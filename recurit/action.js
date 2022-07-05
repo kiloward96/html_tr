@@ -42,8 +42,16 @@ function chk_success() {
 function cancel() {
  	if (confirm("이전에 입력한 정보가 사라집니다 정말 취소하시겠습니까?") == true){
     		alert("취소되었습니다.");
-    		document.getElementById("recurit_data".reset);
     		location = "./recruitView.html";
+	}
+	else {
+   		return false;
+	}
+}
+function cancel_mem() {
+ 	if (confirm("이전에 입력한 정보가 사라집니다 정말 취소하시겠습니까?") == true){
+    		alert("취소되었습니다.");
+    		location = "./index.html";
 		}
 		else {
     		return false;
@@ -71,6 +79,22 @@ function save() {
 			return false;
 	}
 }
+function save_mem() {
+	if (confirm("가입하시겠습니까?") == true) {
+		alert("가입되었습니다.")
+		location = "./recruitLogin.html";
+	}
+	else {
+			return false;
+	}
+}
 function modify() {
 		location = "./recruitModForm.html";
+}
+function PreviewImage() {
+        var preview = new FileReader();
+        preview.onload = function (e) {
+        document.getElementById("user_image").src = e.target.result;
+    	};
+    preview.readAsDataURL(document.getElementById("user_profile_img").files[0]);
 }

@@ -138,7 +138,7 @@
 			<th>√우편번호</th>
 			<td>
 				<input type="text" name="postnum" id="postnum" style="width:150px">
-				<input type="button" id="serch_postnum" value="주소검색"">
+				<input type="button" id="serch_postnum" value="주소검색" onclick="location.href=''">
 			</td>
 		</tr>
 		<tr>
@@ -158,10 +158,9 @@
 		</tr>
 	</table>
 	<br>
-	<div>
-		<input style="text-align: center;" type="button" id="btn_list" value="목록" onclick="recu_list();">
-		<input type="button" id="btn_save" value="저장" onclick="save();">
-		<input type="button" id="btn_cancel" value="취소" onclick="cancel();">
+	<div style="text-align: center;">
+		<input type="button" id="btn_save" value="회원가입" onclick="save_mem();">
+		<input type="button" id="btn_cancel" value="가입취소" onclick="cancel_mem();">
 	</div>
 </form>
 </body>

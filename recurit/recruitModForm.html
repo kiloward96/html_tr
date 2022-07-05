@@ -25,6 +25,7 @@
 			border-collapse: collapse;
 			text-align: center;
 			height: 10px;
+			margin: auto;
 		}
 		
 		th, td {
@@ -37,30 +38,31 @@
 			padding: 0px;
 		}
 		img {
-			max-width: 100%;
 			height: 250px;
 		}
 	</style>
 </head>
 <body>
-<form method="get" name="recurit_data">
-	<div style="background-color: white; width: 1200px; margin: auto; text-align: center;">
-	<table style="margin-left:auto;margin-right:auto" height="15px">
-	<caption style="text-align: center;"><h1>입사지원서</h1></caption>
-		<tr>
-			<td style="background-color:#93DAFF" width="100px">지원분야</td>
-			<td width="100px"><input type="text" id="SupportArea" value="개발자"></td>
-			<td style="background-color:#93DAFF" width="100px">경력구분</td>
-			<td width="100px"><input type="text" id="career" value="신입"></td>
-			<td style="background-color:#93DAFF" width="100px">희망연봉</td>
-			<td width="100px"><input type="text" id="Salary" value="회사 내규에 따름"></td>
-		</tr>
-	</table>
-	<br>
-		<table style="margin-left:auto;margin-right:auto">
+	<div style="background-color: white; width: 1200px; margin: auto;">
+		<table>
+		<caption style="text-align: center;"><h1>입사지원서</h1></caption>
+			<tr>
+				<td style="background-color:#93DAFF" width="100px">지원분야</td>
+				<td width="100px"><input type="text" id="SupportArea" value="개발자"></td>
+				<td style="background-color:#93DAFF" width="100px">경력구분</td>
+				<td width="100px"><input type="text" id="career" value="신입"></td>
+				<td style="background-color:#93DAFF" width="100px">희망연봉</td>
+				<td width="100px"><input type="text" id="Salary" value="회사 내규에 따름"></td>
+			</tr>
+		</table>
+		<br>
+		<table>
 		<caption><h4>□ 기본정보</h4></caption>
 			<tr>
-				<td class="image" width="100px" rowspan="6"><img src="../image/test.jpg"</td>
+				<td class="image" width="100px" rowspan="6">
+					<img src="../image/test.jpg" id="user_image" src="#" alt="" width="100%">
+				</td>
+				</td>
 				<td style="background-color:#93DAFF; letter-spacing:10px" width="50px">성 명</td>
 				<td width="150px"><input type="text" id="name" value="홍길동"></td>				
 				<td style="background-color:#93DAFF; letter-spacing:10px" width="50px">한 문</td>
@@ -103,7 +105,9 @@
 				<td width="150px"></td> -->
 			</tr>
 		</table>
-	<br>
+		<br>
+		<input style="position:relative; left:100px;" accept=".jpg" onchange="PreviewImage();" type="file" id="user_profile_img">
+		<br>
 		<table>
 		<caption><h4>□ 학력사항</h4></caption>
 			<thead>
@@ -132,7 +136,7 @@
 				</tr>
 			</tbody>
 		</table>
-	<br>
+		<br>
 		<table>
 		<caption><h4>□ 교육연수</h4></caption>
 				<tr>
@@ -146,7 +150,7 @@
 					<td><input type="text" id="work_tr" value="웹개발"></td>
 				</tr>
 		</table>
-	<br>
+		<br>
 		<table>
 		<caption><h4>□ 자격사항</h4></caption>
 			<thead>
@@ -172,37 +176,39 @@
 				</tr>
 			</tbody>
 		</table>
-	<br>
-	<table>
-	<caption><h4>□ 경력사항</h4></caption>
-		<thead>
-			<tr>
-				<td style="background-color:#93DAFF" width="100px">활동기간</td>
-				<td style="background-color:#93DAFF" width="50px">기관</td>
-				<td style="background-color:#93DAFF" width="50px">담당업무</td>
-				<td style="background-color:#93DAFF" width="200px">경험 및 습득 역량</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><input type="text" id="period" value="20XX.XX.XX ~ 20XX.XX.XX"></td>
-				<td><input type="text" id="company" value="한국IT기업"></td>
-				<td><input type="text" id="part" value="영업"></td>
-				<td><input type="text" id="exper" value="제품에 대한 기술영업 진행"></td>
-			</tr>
-			<tr>
-				<td><input type="text" id="period_2"></td>
-				<td><input type="text" id="company_2"></td>
-				<td><input type="text" id="part_2"></td>
-				<td><input type="text" id="exper_2"></td>
-			</tr>
-		</tbody>
-	</table>
-	<br>
-	<input style="text-align: center;" type="button" id="btn_list" value="목록" onclick="recu_list();">
-	<input type="button" id="btn_save" value="저장" onclick="save();">
-	<input type="button" id="btn_cancel" value="취소" onclick="cancel();">
-	<br><br>
+		<br>
+		<table>
+		<caption><h4>□ 경력사항</h4></caption>
+			<thead>
+				<tr>
+					<td style="background-color:#93DAFF" width="100px">활동기간</td>
+					<td style="background-color:#93DAFF" width="50px">기관</td>
+					<td style="background-color:#93DAFF" width="50px">담당업무</td>
+					<td style="background-color:#93DAFF" width="200px">경험 및 습득 역량</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="text" id="period" value="20XX.XX.XX ~ 20XX.XX.XX"></td>
+					<td><input type="text" id="company" value="한국IT기업"></td>
+					<td><input type="text" id="part" value="영업"></td>
+					<td><input type="text" id="exper" value="제품에 대한 기술영업 진행"></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="period_2"></td>
+					<td><input type="text" id="company_2"></td>
+					<td><input type="text" id="part_2"></td>
+					<td><input type="text" id="exper_2"></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<div style="text-align: center">
+		<input style="text-align: center;" type="button" id="btn_list" value="목록" onclick="recu_list();">
+		<input type="button" id="btn_save" value="저장" onclick="save();">
+		<input type="button" id="btn_cancel" value="취소" onclick="cancel();">
+		<br><br>
+		</div>
 	</div>
 </form>
 </body>
