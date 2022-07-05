@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
 </head>
-<link href="./action.html" rel="javascript" type="text/JavaScript">
+	<script type="text/javascript" src="./action.js"></script>
 	<style type="text/css">
 		body {
 			background-image: url('image/background.jpg');
@@ -84,9 +84,10 @@
 		</tr>
 		<tr>
 			<td class="login_tble">PW : <input type="password" id="passwd"></td>
+			<input type="hidden" id="passwd_chk" value="test1234">
 		</tr>
 		<tr>
-			<td class="login_tble"><input type="button" id="btn_login" value="Login"></td>
+			<td class="login_tble"><input type="button" id="btn_login" value="Login" onclick="login();"></td>
 		</tr>
 		<tr>
 			<td class="login_tble"></td>

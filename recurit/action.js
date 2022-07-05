@@ -1,3 +1,24 @@
+function login() {
+	var id = document.getElementById("id").value;
+	var id_2 = document.getElementById("id_chk").value;
+	var passwd = document.getElementById("passwd").value;
+	var passwd_2 = document.getElementById("passwd_chk").value;
+	if (id != id_2) {
+		alert("로그인에 실패하였습니다.");
+	}
+	else if (id == 0 || passwd == 0) {
+		alert("ID가 입력되지 않았습니다.");
+		return false;
+	}
+	else if (passwd != passwd_2) {
+		alert("비밀번호가 일치하지 않습니다.");
+	}
+	else {
+		alert("로그인 성공");
+		location = "./recruitList.html";
+		return true;
+	}
+}
 function logout() {
 	if (confirm("로그아웃 하시겠습니까?") == true) {
 		alert("로그아웃 되었습니다.");
