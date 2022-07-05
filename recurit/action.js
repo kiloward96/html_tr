@@ -3,14 +3,22 @@ function login() {
 	var id_2 = document.getElementById("id_chk").value;
 	var passwd = document.getElementById("passwd").value;
 	var passwd_2 = document.getElementById("passwd_chk").value;
-	if (id != id_2) {
+	if (id == 0) {
+		alert("아이디를 입력하세요.");
+		return false;
+	}
+	else if (id != id_2) {
 		alert("존재하지 않는 계정입니다.");
 		return false;
-	}
-	else if (passwd != passwd_2) {
-		alert("비밀번호가 일치하지 않습니다.");
+		}
+	else if (id == id_2 && passwd == 0) {
+		alert("비밀번호를 입력하세요.");
 		return false;
 	}
+	else if (id == id_2 && passwd != passwd_2) {
+		alert("비밀번호가 일치하지 않습니다.");
+		return false;
+		}
 	else {
 		alert("로그인 성공");
 		location = "./recruitList.html";

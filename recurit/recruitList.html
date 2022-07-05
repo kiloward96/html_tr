@@ -14,7 +14,7 @@
 			position: scroll;
 			background-attachment: fixed;
 		}
-		table.banner {
+		.banner {
 			position: fixed;
 			left: 450px;
 			margin: auto;
@@ -49,10 +49,8 @@
 			font-family: Nanum Gothic;
 			height: 15px;
 		}
-		a {
+		th, a, a:link, a:visited, a:hover, a:active {
 			text-decoration-line: none;
-		}
-		th, a:link, a:visited, a:hover, a:active {
 			color: white;
 		}
 		td.top {
@@ -73,7 +71,7 @@
 	<table class="banner">
 	<caption>recruit List</caption>
 		<tr>
-			<th style="display: inline-block;"><a onclick="logout();">Log Out</a></th>
+			<th><a onclick="logout();">Log Out</a></th>
 			<th><a href="./recruitWriteForm.html">Write</th>
 		</tr>
 	</table>

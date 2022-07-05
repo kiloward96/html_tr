@@ -37,10 +37,8 @@
 			font-weight: bold;
 			font-family: Nanum Gothic;
 		}
-		a {
+		a, a:link, a:visited, a:hover, a:active {
 			text-decoration-line: none;
-		}
-		a:link, a:visited, a:hover, a:active {
 			color: white;
 		}
 		td.login_tble {
@@ -50,24 +48,30 @@
 			height: 80px;
 			text-align: center;
 		}
+		td.idpw_tble {
+			font-size: 25px;
+			font-weight: bold;
+			font-family: Nanum Gothic;
+			height: 80px;
+		}
 		table.login_tble {
 			border-collapse: collapse;
 			border-top-left-radius: 40px;
 			border-top-right-radius: 40px;
 			border-bottom-left-radius: 40px;
 			border-bottom-right-radius: 40px;
+			background-color: white;
+			width: 600px;
 		}
 	</style>
-
 <body>
-<form>
 	<table>
 	<caption class="title">recurit.site</caption>
 		<tr>
 			<th><a href="./index.html">Main</a></th>
 		</tr>
 	</table>
-	<table class="login_tble" style="background-color: white;" width="600px">
+	<table class="login_tble">
 		<tr>
 			<td class="login_tble">Sign Up</td>
 		</tr>
@@ -75,15 +79,17 @@
 			<td class="login_tble"></td>
 		</tr>
 		<tr>
-			<td class="login_tble">
-				ID : <input type="text" id="id">
+			<td class="idpw_tble" style="position: relative; left: 170px;">ID : <input type="text" id="id">
 				<input type="hidden" id="id_chk" value="test">
 			</td>
 			
 		</tr>
 		<tr>
-			<td class="login_tble">PW : <input type="password" id="passwd"></td>
+			<td class="idpw_tble" style="position: relative; left: 156px;">PW : <input type="password" id="passwd"></td>
 			<input type="hidden" id="passwd_chk" value="test1234">
+		</tr>
+		<tr>
+			<td class="login_tble"></td>
 		</tr>
 		<tr>
 			<td class="login_tble">
@@ -91,12 +97,6 @@
 				<input type="button" id="btn_login" value="Sign in" onclick="location.href=('./recruitRegForm.html')">
 			</td>
 		</tr>
-		<tr>
-			<td class="login_tble"></td>
-		</tr>
 	</table>
-</form>
-
-
 </body>
 </html>
