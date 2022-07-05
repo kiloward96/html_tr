@@ -111,9 +111,9 @@ function modify() {
 		location = "./recruitModForm.html";
 }
 function PreviewImage() {
-        var preview = new FileReader();
-        preview.onload = function (e) {
-        document.getElementById("user_image").src = e.target.result;
-    	};
+	var preview = new FileReader();
+	preview.onload = function (e) {
+	document.getElementById("user_image").src = e.target.result;
+    };
     preview.readAsDataURL(document.getElementById("user_profile_img").files[0]);
 }
