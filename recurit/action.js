@@ -5,13 +5,11 @@ function login() {
 	var passwd_2 = document.getElementById("passwd_chk").value;
 	if (id != id_2) {
 		alert("로그인에 실패하였습니다.");
-	}
-	else if (id == 0 || passwd == 0) {
-		alert("ID가 입력되지 않았습니다.");
 		return false;
 	}
 	else if (passwd != passwd_2) {
 		alert("비밀번호가 일치하지 않습니다.");
+		return false;
 	}
 	else {
 		alert("로그인 성공");

@@ -51,7 +51,6 @@
 			text-align: center;
 		}
 		table.login_tble {
-			
 			border-collapse: collapse;
 			border-top-left-radius: 40px;
 			border-top-right-radius: 40px;
@@ -68,7 +67,7 @@
 			<th><a href="./index.html">Main</a></th>
 		</tr>
 	</table>
-	<table class="login_tble" style="background-color: white;" width="800px">
+	<table class="login_tble" style="background-color: white;" width="600px">
 		<tr>
 			<td class="login_tble">Sign Up</td>
 		</tr>
@@ -87,7 +86,10 @@
 			<input type="hidden" id="passwd_chk" value="test1234">
 		</tr>
 		<tr>
-			<td class="login_tble"><input type="button" id="btn_login" value="Login" onclick="login();"></td>
+			<td class="login_tble">
+				<input type="button" id="btn_login" value="Login" onclick="login();">&nbsp;
+				<input type="button" id="btn_login" value="Sign in" onclick="location.href=('./recruitRegForm.html')">
+			</td>
 		</tr>
 		<tr>
 			<td class="login_tble"></td>
