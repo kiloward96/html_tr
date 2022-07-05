@@ -67,10 +67,10 @@ function chk_success() {
 	alert("확인되었습니다.")
 }
 function cancel() {
- 	if (confirm("이전에 입력한 정보가 사라집니다 정말 취소하시겠습니까?") == true){
+    if (confirm("저장하지 않은 정보가 사라집니다 정말 취소하시겠습니까?") == true){
     		alert("취소되었습니다.");
     		location = "./recruitView.html";
-	}
+    }
 	else {
    		return false;
 	}
