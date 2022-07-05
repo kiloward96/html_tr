@@ -20,7 +20,7 @@ function login() {
 function logout() {
 	if (confirm("로그아웃 하시겠습니까?") == true) {
 		alert("로그아웃 되었습니다.");
-		document.getElementById("form").submit(); 
+		location = "./index.html";
 	}
 	else {
 		return false;
