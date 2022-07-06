@@ -32,7 +32,6 @@
 			border-collapse: collapse;
 			text-align: center;
 		}
-		
 		caption {
 			color: white;
 			text-align: center;
@@ -51,6 +50,7 @@
 		th, a, a:link, a:visited, a:hover, a:active {
 			text-decoration-line: none;
 			color: white;
+			cursor: pointer;
 		}
 		td.top {
 			color: white;
@@ -64,21 +64,41 @@
 			font-size: 13px;
 			height: 40px;
 		}
-		div.search {
+		div.page {
 			position: fixed;
 			left: 450px;
-			top: 700px;
+			top: 650px;
 			margin: auto;
 			width: 1000px;
 			text-align: center;
+			color: white;
+		}
+		div.search {
+			position: fixed;
+			left: 780px;
+			top: 700px;
+			margin: auto;
+			width: 300px;
+			height: 30px;
+			text-align: center;
+			display: inline-block;
+			background-color: grey;
+			border: solid 1px black;
+		}
+		input.btn_search {
+			background: url("../image/search_ico.png") no-repeat;
+			border: none;
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+			vertical-align: middle;
 		}
 	</style>
-
 <body>
 	<table class="banner">
 	<caption>recruit List</caption>
 		<tr>
-			<th><a style="cursor: pointer;" onclick="logout();">Log Out</a></th>
+			<th><a onclick="logout();">Log Out</a></th>
 			<th><a href="./recruitWriteForm.html">Write</th>
 		</tr>
 	</table>
@@ -183,10 +203,17 @@
 			<td class="middle"></td>
 		</tr>
 	</table>
+	<div class="page"><span>◀ 1 ▶</span></div>
+	<br><br>
 	<div class="search">
-		<input type="text" id="search_box_nm" placeholder="지원자명" style="width:200px; height: 20px;">
-		<input type="text" id="search_box_period" placeholder="경력" style="width:200px; height: 20px;">
-		<input type="text" id="search_box_part" placeholder="지원분야" style="width:200px; height: 20px;">
-    </div>
+		<select name="search_filter">
+			<option value="">검색필터
+			<option value="search_name">지원자
+			<option value="search_period">경력
+			<option value="search_part">지원분야
+		</select>
+		<input type="text" id="search_box" placeholder="검색어를 입력하세요." width="200px"; height="15px";>
+		<input class="btn_search" type="button" id="search_btn">
+	</div>	
 </body>
 </html>

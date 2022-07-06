@@ -67,29 +67,36 @@ function chk_success() {
 	alert("확인되었습니다.")
 }
 function cancel() {
-    if (confirm("저장하지 않은 정보가 사라집니다 정말 취소하시겠습니까?") == true){
+	var null_data = document.getElementById("info_null").value;
+	if (null_data == 1 ) {
+		if (confirm("저장하지 않은 정보가 사라집니다 정말 취소하시겠습니까?") == true) {
+			alert("취소되었습니다.");
+			location.reload();
+			return true;
+		}
+	}
+	if (null_data != 1 ) {
+		if (confirm("변경된 정보가 사라집니다 정말 취소하시겠습니까?") == true) {
+		   		alert("취소되었습니다.");
+		   		location = "./recruitView.html";
+		   		return true;
+		}
+	}
+}
+function cancel_mem() {
+ 	if (confirm("이전에 입력한 정보가 사라집니다 정말 취소하시겠습니까?") == true) {
     		alert("취소되었습니다.");
-    		location = "./recruitView.html";
-    }
+    		location = "./index.html";
+	}
 	else {
    		return false;
 	}
 }
-function cancel_mem() {
- 	if (confirm("이전에 입력한 정보가 사라집니다 정말 취소하시겠습니까?") == true){
-    		alert("취소되었습니다.");
-    		location = "./index.html";
-		}
-		else {
-    		return false;
-		}
-}
 function list_view() {
-		alert("지원목록으로 돌아갑니다.");
 		location = "./recruitList.html";
 }
 function recu_list() {
-	if (confirm("이전에 입력한 정보가 사라집니다 정말 진행하시겠습니까?") == true) {
+	if (confirm("저장하지 않은 정보가 사라집니다 정말 진행하시겠습니까?") == true) {
 		alert("지원목록으로 돌아갑니다.");
 		location = "./recruitList.html";
 	}
