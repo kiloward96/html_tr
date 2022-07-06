@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="uTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LGG</title>
+	<style type="text/css">
+	/* 	
+		CSS 표준이 정의한 초기 기본값
+		width와 height 속성이 콘텐츠 영역만 포함하고 안밖 여백과 테두리는 표함하지 않습니다.
+	*/
+	 
+		#aaa {
+			box-sizing: content-box;
+			background-color: red;
+			width: 300px;
+			height: 150px;
+			margin: 10px;
+			padding: 30px;
+			border: 1px solid grey;
+		}
+		
+	/* 	
+		width와 height 속성이 안쪽 여백과 테두리는 포함하고, 바깥 여백은 포함하지 않습니다.
+	*/
+		
+		#bbb {
+			box-sizing: border-box;
+			background-color: blue;
+			width: 300px;
+			height: 150px;
+			margin: 10px;
+			padding: 30px;
+			border: 1px solid grey;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="aaa">김철수</div>
+	<div id="bbb">김영희</div>
+
+</body>
+</html>
