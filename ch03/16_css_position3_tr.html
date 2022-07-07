@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LGG</title>
 	<style type="text/css">
-		#aaa {
+		#title {
 			background-color: #40FF00;
 			text-align: center;
 		}
@@ -15,6 +15,7 @@
 			font-weight: bold;
 			text-align: center;
 			width: 10%;
+			padding-bottom: 17px;
 		}
 		#ccc {
 			background-color: #ACFA58;
@@ -22,12 +23,10 @@
 			width: 90%;
 		}
 		#ddd {
-			background-color: #F4FA58;
+			background-color: white;
 			float: left;
 			width: 90%;
-			font-size: 30px;
-			padding-top: 10px;
-			padding-bottom: 10px;
+			font-size: 20px;
 			text-align: center;
 			
 		}
@@ -35,11 +34,11 @@
 			background-color: #F3E2A9;
 			float: left;
 			width: 90%;
-			font-size: 30px;
+			font-size: 15px;
 			padding-top: 10px;
 			padding-bottom: 10px;
 			text-align: center;
-			
+			width: 100%
 		}
 		#zzz {
 			background-color: #D8D8D8;
@@ -51,6 +50,7 @@
 		}
 		ul.list {
 			list-style-type: upper-roman;
+			margin-bottom: 0px;
 		}
 		ul.sub {
 			list-style-type: none;
@@ -64,58 +64,122 @@
 			float: left;
 			margin-left: 50px;
 		}
+		table.tble_user, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			text-align: center;
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-top: 0px;
+			padding: 5px;
+		}
 	</style>
 </head>
 <body>
-	<div>header</div>
-	<div id="aaa"><h1>Global Navigation Bar</h1></div>
+	<div id="wrap">
+	<div id="title"><h1>Global Navigation Bar</h1></div>
 	<div id="bbb">
 		<ol class="list">
 			<li class="list"><h4>사용자</h4>
 				<ul class="list">
+					<li><h6>내 정보</h6>
 					<li><h6>회원관리</h6>
 					<li><h6>관리자</h6>
 					<li><h6>그룹</h6>
 				</ul>
-			<li class="list"><h4>관리</h4>
 			<li class="list"><h4>기능</h4>
+			<li class="list"><h4>통계</h4>
 			<li class="list"><h4>etc</h4>
 		</ol>
 	</div>
 	<div id="ccc"><h3 style="margin-left: 20px;">◎ 회원 관리</h3>
 		<ul class="sub">
-			<li class="sub"><h3>No</h3>
-			<li class="sub"><h3>관리자 여부</h3>
-			<li class="sub"><h3>이름</h3>
-			<li class="sub"><h3>아이디</h3>
-			<li class="sub"><h3>이메일</h3>
-			<li class="sub"><h3>핸드폰</h3>
-			<li class="sub"><h3>마지막 로그인</h3>
-			<li class="sub"><h3>회원가입일</h3>
-			<li class="sub"><h3>최근수정일</h3>
-			<li class="sub"><h3>탈퇴여부</h3>
+			<li class="sub"><h3>회원 리스트</h3>
+			<li class="sub"><h3>탈퇴 회원 리스트</h3>
+			<li class="sub"><h3></h3>
 		</ul>
 	</div>
 	<div id="ddd">
-		<table class="">
+		<table class="tble_user" style="width: 100%">
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>No</td>
+				<td>Name</td>
+				<td>ID</td>
+				<td>E-mail</td>
+				<td>mobile</td>
+				<td>birthday</td>
+				<td>logout date</td>
+				<td>delete</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>김철수</td>
+				<td>ironkim01</td>
+				<td>ironkim01@gmail.com</td>
+				<td>010-1111-2222</td>
+				<td>2022-07-06</td>
+				<td>2022-07-05 22:32:12</td>
+				<td>N</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>김철수</td>
+				<td>ironkim01</td>
+				<td>ironkim01@gmail.com</td>
+				<td>010-1111-2222</td>
+				<td>2022-07-06</td>
+				<td>2022-07-05 22:32:12</td>
+				<td>N</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>김철수</td>
+				<td>ironkim01</td>
+				<td>ironkim01@gmail.com</td>
+				<td>010-1111-2222</td>
+				<td>2022-07-06</td>
+				<td>2022-07-05 22:32:12</td>
+				<td>N</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>김철수</td>
+				<td>ironkim01</td>
+				<td>ironkim01@gmail.com</td>
+				<td>010-1111-2222</td>
+				<td>2022-07-06</td>
+				<td>2022-07-05 22:32:12</td>
+				<td>N</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>김철수</td>
+				<td>ironkim01</td>
+				<td>ironkim01@gmail.com</td>
+				<td>010-1111-2222</td>
+				<td>2022-07-06</td>
+				<td>2022-07-05 22:32:12</td>
+				<td>N</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>김철수</td>
+				<td>ironkim01</td>
+				<td>ironkim01@gmail.com</td>
+				<td>010-1111-2222</td>
+				<td>2022-07-06</td>
+				<td>2022-07-05 22:32:12</td>
+				<td>N</td>
 			</tr>
 		</table>
 	</div>
 	<div id="eee">
-		<input type="button" value="이전"> 1 <input type="button" value="다음">
+		<input type="button" value="이전"> <b>1</b> 2 3 <input type="button" value="다음">
 	</div>
 	<div id="zzz">
 		<h4><span>대한민국 서울특별시
 		<hr>도움말의견 보내기 개인정보처리방침약관</span></h4>
+	</div>
 	</div>
 </body>
 </html>
