@@ -8,7 +8,6 @@
 
 </head>
 <body>
-
 <!-- start -->
 <!-- 
 <div class="alert alert-primary" role="alert">
@@ -40,7 +39,15 @@
 
 
 	<div id="liveAlertPlaceholder"></div>
-	<button type="button" class="btn btn-info" id="liveAlertBtn">Show live alert</button>
+	<button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+
+	<br><br>
+
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+
 
 
 
@@ -63,7 +70,7 @@
 		const alertTrigger = document.getElementById('liveAlertBtn')
 		if (alertTrigger) {
 		  alertTrigger.addEventListener('click', () => {
-		    alert('Nice, you triggered this alert message!', 'success')
+		    alert('좋아, 성공했구나! 너는 트리거를 사용하게되었어!', 'success')
 		  })
 		}
 	</script>
