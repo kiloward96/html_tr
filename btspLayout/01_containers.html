@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap demo</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<!-- start -->
+	
+	<div style="background-color: orange;">btsp 클래스 없는 div</div>
+	<div class="container bg-danger">.container는 각 브레이크 포인트 별로 최대 가로사이즈가 정해져 있다.</div>
+	<div class="container" style="background-color: orange;">1400 ~ :: 1320</div>
+	<div class="container" style="background-color: orange;">1200 ~ 1400 :: 1140</div>
+	<div class="container" style="background-color: orange;">992 ~ 1200:: 960</div>
+	<div class="container" style="background-color: orange;">768  ~ 992:: 720</div>
+	<div class="container" style="background-color: orange;">576 ~ 768:: 540</div>
+	<div class="container" style="background-color: orange;"> ~ 576 :: 100%</div>
+	
+	<div class="container-fluid bg-primary">.container-fluid는 각 브레이크 포인트와 상관없이 항상 가로사이즈가 100% 이다.</div>
+	<br>
+	<div class="container-sm" style="background-color: orange;">100% < <b>576 (sm)</b> < 540 : 720 : 960 : 1140 : 1320</div>
+	<div class="container-md" style="background-color: orange;">100% < <b>768 (md)</b> < 720 : 960 : 1140 : 1320</div>
+	<div class="container-lg" style="background-color: orange;">100% < <b>992 (lg)</b> < 960 : 1140 : 1320</div>
+	<div class="container-xl" style="background-color: orange;">100% < <b>1200 (xl)</b> < 1140 : 1320</div>
+	<div class="container-xxl" style="background-color: orange;">100% < <b>1400 (xxl)</b> < 1320</div>
+
+
+	<!-- end -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
